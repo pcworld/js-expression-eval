@@ -319,6 +319,9 @@ var Parser = (function (scope) {
 	function concat(a, b) {
 		return "" + a + b;
 	}
+	function log10(a) {
+		return Math.log(a) / Math.LN10;
+	}
 
 	function neg(a) {
 		return -a;
@@ -370,7 +373,8 @@ var Parser = (function (scope) {
 			"acos": Math.acos,
 			"atan": Math.atan,
 			"sqrt": Math.sqrt,
-			"log": Math.log,
+			"log": log10,
+			"ln": Math.log,
 			"abs": Math.abs,
 			"ceil": Math.ceil,
 			"floor": Math.floor,
@@ -424,7 +428,8 @@ var Parser = (function (scope) {
 		acos: Math.acos,
 		atan: Math.atan,
 		sqrt: Math.sqrt,
-		log: Math.log,
+		log: log10,
+		ln: Math.log,
 		abs: Math.abs,
 		ceil: Math.ceil,
 		floor: Math.floor,
